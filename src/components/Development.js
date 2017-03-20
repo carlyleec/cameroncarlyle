@@ -11,19 +11,6 @@ const graphqlImg = require('../images/graphql.png');
 const expressImg = require('../images/express.png');
 const firebaseImg = require('../images/firebase.png');
 
-const multiLineString = `
-  function() {
-    x = something;
-  }
-  const str = 'this is a string';
-  const this = (x, y) => (
-    return x++
-  ) 
-`;
-
-
-const str = multiLineString.toString();
-console.log(str);
 
 const Development = () => (
   <div className="row" style={{marginTop: '30px'}}>

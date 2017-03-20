@@ -23,7 +23,7 @@ const Breadcrumbs = ({ crumbs }) => (
 );
 
 Breadcrumbs.propTypes = {
-  crumbs: React.PropTypes.arrayOf(React.PropTypes.String),
+  crumbs: React.PropTypes.arrayOf(React.PropTypes.string),
 };
 
 export default Breadcrumbs;

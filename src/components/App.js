@@ -1,9 +1,5 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Navbar from './Navbar';
-
-// import AuthProviderModal from '../modules/auth/authProviderModal';
-
 
 const App = props => (
   <div className="">
