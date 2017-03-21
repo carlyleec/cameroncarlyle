@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import HomeSvg from './svgs/HomeSvg';
 
 const HomeWrapper = styled.div`
-  margin-top: 130%;
+  margin-top: 100%;
   text-align: center;
   width: 100%;
   @media (min-width: 480px) {

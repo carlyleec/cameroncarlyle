@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-// import { initAuth } from './modules/auth/';
+
 
 // Import Redux Store
 import configureStore from './configureStore';
