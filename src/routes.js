@@ -11,13 +11,14 @@ import { Provider } from 'react-redux';
 // Routed components
 import App from './components/App';
 import Home from './components/Home';
-import Layout from './components/layout/layout';
+import Layout from './components/Layout';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import Expertise from './components/Expertise';
 import Design from './components/Design';
 import Data from './components/Data';
 import Development from './components/Development';
+import Contact from './components/Contact';
 
 const Routes = props => (
   <Provider store={props.store}>
@@ -33,6 +34,7 @@ const Routes = props => (
             <Route path="development" component={Development}></Route>
             <Route path="data" component={Data}></Route>
           </Route>
+          <Route path="contact" component={Contact}></Route>
         </Route>
       </Route>
     </Router>
@@ -41,8 +43,7 @@ const Routes = props => (
 
 Routes.propTypes = {
   /* eslint-disable */
-  store: React.PropTypes.object.isRequired, 
+  store: React.PropTypes.object.isRequired,
 };
 
 export default Routes;
-

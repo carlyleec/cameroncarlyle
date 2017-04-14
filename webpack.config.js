@@ -4,8 +4,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
-  entry: path.join(__dirname, 'src', 'app.js'),
+  devtool: 'source-map',
+  entry: {
+    app: path.join(__dirname, 'src', 'app.js'),
+    vendors: ['react', 'react-router', 'redux', 'react-redux', 'styled-components'],
+  },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].bundle.js',
@@ -30,11 +33,21 @@ module.exports = {
         loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap'),
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: ExtractTextPlugin.extract('css'),
+      },
+      {
+        test: /\.(ico|jpg|png)$/,
         loader: 'file-loader',
         options: {
           name: '[path][name].[hash].[ext]',
         },
+      },
+      {
+        test: /\.md$/,
+        exclude: /node_modules/,
+        loader: 'json!yaml-frontmatter-loader',
       },
     ],
   },
@@ -48,7 +61,6 @@ module.exports = {
       template: path.join(__dirname, 'src', 'index.html')
     }),
     new ExtractTextPlugin('boostrap.css'),
+    new ExtractTextPlugin('styles.css'),
   ],
 };
-
-

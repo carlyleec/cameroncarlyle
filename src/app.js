@@ -8,8 +8,13 @@ import configureStore from './configureStore';
 // Import Routes
 import Routes from './routes';
 
+// Import favicons
+import './favicons/favicons';
+
+
 // Import styles
-require('./styles/styles.scss');
+require('./styles/styles.css');
+
 
 const store = configureStore();
 
