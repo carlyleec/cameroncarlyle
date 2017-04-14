@@ -28,11 +28,6 @@ module.exports = {
         loader: 'json-loader',
       },
       {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap'),
-      },
-      {
         test: /\.css$/,
         exclude: /node_modules/,
         loader: ExtractTextPlugin.extract('css'),
@@ -58,7 +53,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html')
+      template: path.join(__dirname, 'src', 'index.html'),
     }),
     new ExtractTextPlugin('boostrap.css'),
     new ExtractTextPlugin('styles.css'),

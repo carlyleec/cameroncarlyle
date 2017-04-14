@@ -1,6 +1,7 @@
 import React from 'react';
 // import { Provider } from 'react-redux';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, applyRouterMiddleware, browserHistory } from 'react-router';
+import { useScroll } from 'react-router-scroll';
 import { Provider } from 'react-redux';
 // import { ApolloProvider } from 'react-apollo';
 
@@ -22,7 +23,7 @@ import Contact from './components/Contact';
 
 const Routes = props => (
   <Provider store={props.store}>
-    <Router history={browserHistory}>
+    <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
         <Route component={Layout}>
