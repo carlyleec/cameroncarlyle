@@ -5,4 +5,4 @@ I learned to program using Python, and used Python in graduate thesis to calcula
 My experience with PHP has primarily been limited to Wordpress, but I have had some interaction with Laravel. I’ve developed custom themes and post types in Wordpress using PHP including customizations for plugins like Buddypress. I’m completely comfortable working in PHP, and have taken courses in but never actually used Laravel in production.
 
 ### Others
-I worked as a front-end developer on project with a Java J2EE backend with which I had some interaction. I’m taken courses on but never actually used in production the following: Ruby, Swift, Objective C, C++, VBA, and VB.Net.
+I worked as a front-end developer on project with a Java J2EE backend with which I had some interaction. I’ve taken courses on but never actually used in production the following: Ruby, Swift, Objective C, C++, VBA, and VB.Net.
