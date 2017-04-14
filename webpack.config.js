@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
+  context: path.join(__dirname),
   devtool: 'source-map',
   entry: {
     app: path.join(__dirname, 'src', 'app.js'),
@@ -33,13 +34,6 @@ module.exports = {
         loader: ExtractTextPlugin.extract('css'),
       },
       {
-        test: /\.(ico|jpg|png)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[hash].[ext]',
-        },
-      },
-      {
         test: /\.md$/,
         exclude: /node_modules/,
         loader: 'json!yaml-frontmatter-loader',
@@ -55,7 +49,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
     }),
-    new ExtractTextPlugin('boostrap.css'),
     new ExtractTextPlugin('styles.css'),
   ],
 };

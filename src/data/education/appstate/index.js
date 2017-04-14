@@ -1,13 +1,9 @@
 // Markdown
 const markdown = require('./markdown.md');
 
-// Images
-const image = require('../../../images/appstate-120.png');
-
 const data = {
   id: 'appstate',
   school: 'Appalachian State University',
-  image,
   link: 'http://www.appstate.edu/',
   city: 'Boone',
   state: 'NC',

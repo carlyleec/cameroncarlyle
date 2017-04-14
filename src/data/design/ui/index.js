@@ -1,12 +1,9 @@
 // Markdown
 const markdown = require('./markdown.md');
 
-// Images
-const image = require('../../../images/ui-120.png');
-
 const data = {
   title: 'UI',
-  image,
+  image: '/assets/images/ui_1492207508522.png',
   body: markdown.body,
 };
 

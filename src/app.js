@@ -9,6 +9,9 @@ import configureStore from './configureStore';
 import Routes from './routes';
 
 // Import favicons
+import './images/images';
+
+// Import favicons
 import './favicons/favicons';
 
 

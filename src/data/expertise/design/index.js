@@ -1,14 +1,11 @@
 // Markdown
 const markdown = require('./markdown.md');
 
-// Images
-const image = require('../../../images/design.png');
-
 const data = {
   id: 'design',
   title: 'DESIGN',
   linkTo: '/expertise/design',
-  image,
+  image: '/assets/images/design_1492208140834.png',
   body: markdown.body,
 };
 

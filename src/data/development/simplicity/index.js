@@ -1,12 +1,9 @@
 // Markdown
 const markdown = require('./markdown.md');
 
-// Images
-const image = require('../../../images/simplicity.png');
-
 const data = {
   title: 'SimpliCity',
-  image,
+  image: '/assets/images/simplicity_1492207873995.png',
   body: markdown.body,
 };
 

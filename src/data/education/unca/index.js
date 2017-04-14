@@ -1,13 +1,9 @@
 // Markdown
 const markdown = require('./markdown.md');
 
-// Images
-const image = require('../../../images/unca-120.png');
-
 const data = {
   id: 'unca',
   school: 'University of North Carolina, Asheville',
-  image,
   link: 'https://www.unca.edu/',
   city: 'Asheville',
   state: 'NC',

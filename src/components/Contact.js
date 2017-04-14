@@ -4,11 +4,6 @@ import styled from 'styled-components';
 import Container from './Container';
 import ImageCollection from './ImageCollection';
 
-const logo120 = require('../images/logo-120.png');
-const github = require('../images/github.png');
-const instagram = require('../images/instagram.png');
-const fb = require('../images/fb.png');
-const twitter = require('../images/twitter.png');
 
 const SocialImage = styled.img`
   height: 50px;
@@ -50,19 +45,18 @@ const Contact = () => (
         <EmailLink href="mailto:carlyleec@gmail.com">carlyleec@gmail.com</EmailLink>
         <ImageCollection>
           <a target="_blank" href="https://github.com/carlyleec">
-            <SocialImage alt="Github" src={github}></SocialImage>
+            <SocialImage alt="Github" src="/assets/images/github_1492206232253.png"></SocialImage>
           </a>
           <a target="_blank" href="https://www.instagram.com/_cameroncarlyle/">
-            <SocialImage alt="Instagram" src={instagram}></SocialImage>
+            <SocialImage alt="Instagram" src="assets/images/instagram_1492206330714.png"></SocialImage>
           </a>
           <a target="_blank" href="https://twitter.com/carlyleec">
-            <SocialImage alt="Twitter" src={twitter}></SocialImage>
+            <SocialImage alt="Twitter" src="assets/images/twitter_1492206564080.png"></SocialImage>
           </a>
           <a target="_blank" href="https://www.facebook.com/cameron.carlyle">
-            <SocialImage alt="Facebook" src={fb}></SocialImage>
+            <SocialImage alt="Facebook" src="assets/images/fb_1492206437340.png"></SocialImage>
           </a>
         </ImageCollection>
-
       </ContactContent>
     </ContactWrapper>
   </Container>
