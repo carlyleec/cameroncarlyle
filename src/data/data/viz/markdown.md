@@ -1,1 +1,1 @@
-In addition to geospatial analysis, I can also perform more traditional statistical analysis of datasets from standard summary to more complicate methods of hypothesis testing.  I am experienced using web visualization libraries like D3 and Chart.js.
+In addition to geospatial analysis, I can also perform more traditional statistical analysis of datasets from standard summary to more complicated methods of hypothesis testing.  I am experienced using web visualization libraries like D3 and Chart.js.

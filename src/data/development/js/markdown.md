@@ -9,4 +9,4 @@ I use Yarn (and NPM) for package management, and I know how to configure ```pack
 I've built front-end applications in Angular and React, and am interested in learning more about Vue and Ember. I really enjoy using Redux for handling UI state, and Redux-Sagas for handling asynchronous actions like HTTP requests. I also have experience using the Apollo Client to integrate GraphQL into client side applications. I've done client side routing with both React Router and AngularUI Router. Styled-components has really blown me away with its ability to cleanly add both style and structure to React apps.
 
 #### On the backend-end
-I'm extremely comfortable build server side technologies with Node.js. I’ve built REST APIs in Express, and GraphQL API using GraphQL. I've experiment with and built some prototypes in both Meteor and Firebase.
+I'm extremely comfortable building server side technologies with Node.js. I’ve built REST APIs in Express, and GraphQL API using GraphQL. I've experimented with and built some prototypes in both Meteor and Firebase.
