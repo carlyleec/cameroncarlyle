@@ -1,12 +1,9 @@
 // Markdown
 const markdown = require('./markdown.md');
 
-// Images
-const image = require('../../../images/gis-120.png');
-
 const data = {
   title: 'GEOSPATIAL',
-  image,
+  image: '/assets/images/geospatial_1492206703084.png',
   body: markdown.body,
 };
 

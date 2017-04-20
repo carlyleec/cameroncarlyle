@@ -1,12 +1,9 @@
 // Markdown
 const markdown = require('./markdown.md');
 
-// Images
-const image = require('../../../images/fullstack-120.png');
-
 const data = {
   title: 'FULL-STACK',
-  image,
+  image: '/assets/images/fullstack_1492207463314.png',
   body: markdown.body,
 };
 

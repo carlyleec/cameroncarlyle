@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import styled from 'styled-components';
 
+import BackArrow from './BackArrow';
+
 
 const NavbarWrapper = styled.div`
   display: flex;
@@ -39,7 +41,7 @@ const Navbar = ({ page }) => {
   return (
     <NavbarWrapper justifyContent="space-between">
       <Nav to="">MENU</Nav>
-      <Title>{pageTitle(page)}</Title>
+      <Title><BackArrow size="1em"/> | {pageTitle(page)}</Title>
       <Nav to="/contact">CONTACT</Nav>
     </NavbarWrapper>
   );

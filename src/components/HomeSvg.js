@@ -1,5 +1,5 @@
 import React from 'react';
-import { browserHistory, Link } from 'react-router';
+import { Link } from 'react-router';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`

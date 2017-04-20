@@ -1,12 +1,9 @@
 // Markdown
 const markdown = require('./markdown.md');
 
-// Images
-const image = require('../../../images/hydrasquid-120.png');
-
 const data = {
   title: 'PORTFOLIO',
-  image,
+  image: '/assets/images/hydrasquid_1492207826341.png',
   body: markdown.body,
 };
 
