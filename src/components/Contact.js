@@ -19,22 +19,37 @@ const ContactWrapper = styled.div`
 `;
 
 const ContactContent = styled.div`
-  flex: 1 1;
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 const EmailLink = styled.a`
   font-size: 2em;
-  flex: 1 1;
-  width: 100%;
+  flex: 1 1 100%;
   text-decoration: none;
   font-weight: 700;
   color: #03A9F4;
   text-align: center;
+  margin: auto;
 `;
 
 const Name = styled.h1`
   text-align: center;
   color: #90A4AE;
+  flex: 1 1 100%;
+`;
+
+const ResumeLink = styled.a`
+  font-size: 1em;
+  flex: 1 1 100%;
+  text-decoration: none;
+  font-weight: 700;
+  color: #03A9F4;
+  margin: auto;
+  text-align: center;
 `;
 
 const Contact = () => (
@@ -57,6 +72,7 @@ const Contact = () => (
             <SocialImage alt="Facebook" src="assets/images/fb_1492206437340.png"></SocialImage>
           </a>
         </ImageCollection>
+        <ResumeLink target="_blank" href="/cameron-carlyle-resume.pdf">Download Resume</ResumeLink>
       </ContactContent>
     </ContactWrapper>
   </Container>

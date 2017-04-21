@@ -12,6 +12,9 @@ import Routes from './routes';
 import './images/images';
 
 // Import favicons
+import './pdfs/pdfs';
+
+// Import favicons
 import './favicons/favicons';
 
 

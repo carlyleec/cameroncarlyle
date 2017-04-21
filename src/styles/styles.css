@@ -1,2 +1,4 @@
-@import './global.css';
+
 @import './normalize.css';
+@import './global.css';
+@import '../../node_modules/graphiql/graphiql.css';
