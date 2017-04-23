@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // eslint-disable-line
 import { Link } from 'react-router';
 import styled from 'styled-components';
 

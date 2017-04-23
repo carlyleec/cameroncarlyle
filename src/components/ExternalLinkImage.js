@@ -46,7 +46,12 @@ const ExternalLinkImage = props => (
       <Title>{props.title}</Title>
     </ExternalLink>
   </Wrapper>
-
 );
+
+ExternalLinkImage.propTypes = {
+  href: React.PropTypes.string,
+  src: React.PropTypes.string,
+  title: React.PropTypes.string,
+};
 
 export default ExternalLinkImage;

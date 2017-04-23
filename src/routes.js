@@ -1,28 +1,28 @@
 import React from 'react';
-// import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, applyRouterMiddleware, browserHistory } from 'react-router';
 import { useScroll } from 'react-router-scroll';
-import { Provider } from 'react-redux';
-// import { ApolloProvider } from 'react-apollo';
+// import { Provider } from 'react-redux';
+import { ApolloProvider } from 'react-apollo';
 
 // GraphQL Client
-// import { client } from './modules/gql/gqlClient';
+import client from './graphql/client';
 
 
 // Routed components
 import App from './components/App';
 import Home from './components/Home';
 import Layout from './components/Layout';
-import Education from './components/Education';
-import Experience from './components/Experience';
-import Expertise from './components/Expertise';
-import Design from './components/Design';
-import Data from './components/Data';
-import Development from './components/Development';
+import Education from './containers/Education';
+import Experience from './containers/Experience';
+import Expertise from './containers/Expertise';
+import Design from './containers/Design';
+import Development from './containers/Development';
+import Data from './containers/Data';
 import Contact from './components/Contact';
+import GraphiQLPage from './components/GraphiQLPage';
 
 const Routes = props => (
-  <Provider store={props.store}>
+  <ApolloProvider client={client} store={props.store}>
     <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
@@ -36,10 +36,11 @@ const Routes = props => (
             <Route path="data" component={Data}></Route>
           </Route>
           <Route path="contact" component={Contact}></Route>
+          <Route path="graphiql" component={GraphiQLPage}></Route>
         </Route>
       </Route>
     </Router>
-  </Provider>
+  </ApolloProvider>
 );
 
 Routes.propTypes = {

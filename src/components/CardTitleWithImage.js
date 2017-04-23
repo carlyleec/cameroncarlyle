@@ -48,4 +48,9 @@ const TitleWithImage = props => (
   </Wrapper>
 );
 
+TitleWithImage.propTypes = {
+  src: React.PropTypes.string,
+  children: React.PropTypes.node,
+};
+
 export default TitleWithImage;

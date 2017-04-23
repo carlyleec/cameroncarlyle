@@ -41,7 +41,7 @@ const Navbar = ({ page }) => {
   return (
     <NavbarWrapper justifyContent="space-between">
       <Nav to="">MENU</Nav>
-      <Title><BackArrow size="1em"/> | {pageTitle(page)}</Title>
+      <Title><BackArrow size="1em" /> {pageTitle(page)} </Title>
       <Nav to="/contact">CONTACT</Nav>
     </NavbarWrapper>
   );

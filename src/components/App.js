@@ -29,6 +29,10 @@ const App = props => (
 
 App.propTypes = {
   children: React.PropTypes.node,
+  location: React.PropTypes.shape({
+    pathname: React.PropTypes.string,
+  }),
 };
+
 
 export default App;

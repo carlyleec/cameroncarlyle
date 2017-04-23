@@ -23,6 +23,8 @@ const BackArrow = props => (
   </BackArrowButton>
 );
 
-BackArrow.propTypes = {};
+BackArrow.propTypes = {
+  size: React.PropTypes.string,
+};
 
 export default BackArrow;

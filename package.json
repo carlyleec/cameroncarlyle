@@ -47,8 +47,11 @@
     "yaml-frontmatter-loader": "^0.1.0"
   },
   "dependencies": {
-    "apollo-client": "^0.5.25",
-    "graphql-tag": "^1.1.2",
+    "apollo-client": "^1.0.4",
+    "graphiql": "^0.10.1",
+    "graphql-tag": "^2.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
     "marked": "^0.3.6",
     "react": "^15.4.1",
     "react-addons-css-transition-group": "^15.4.2",
