@@ -8,7 +8,7 @@ import configureStore from './configureStore';
 // Import Routes
 import Routes from './routes';
 
-// Import favicons
+// // Import favicons
 import './images/images';
 
 // Import favicons

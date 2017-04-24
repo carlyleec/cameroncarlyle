@@ -1,42 +1,35 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
-  context: path.join(__dirname),
+  context: path.resolve(__dirname),
   devtool: 'source-map',
   entry: {
     app: path.join(__dirname, 'src', 'app.js'),
-    vendors: ['react', 'react-router', 'redux', 'react-redux', 'styled-components'],
   },
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[chunkhash].bundle.js',
     publicPath: '/',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         include: /src/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.json$/,
-        include: /src/,
-        exclude: /node_modules/,
-        loader: 'json-loader',
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('css'),
-      },
-      {
-        test: /\.md$/,
-        exclude: /node_modules/,
-        loader: 'json!yaml-frontmatter-loader',
+        use: ExtractTextPlugin.extract({
+          use: 'css-loader',
+        }),
       },
     ],
   },
@@ -46,6 +39,13 @@ module.exports = {
     stats: 'errors-only',
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: module => (
+        // this assumes your vendor imports exist in the node_modules directory
+        module.context && module.context.indexOf('node_modules') !== -1
+      ),
+    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
     }),
