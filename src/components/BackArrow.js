@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { browserHistory } from 'react-router';
 
 const BackArrowButton = styled.button`
+  display: ${props => (props.hasHistory > 1 ? 'inline-block' : 'none')};
   border: none;
   background: none;
   vertical-align: middle;
@@ -12,7 +13,7 @@ const BackArrowButton = styled.button`
 
 
 const BackArrow = props => (
-  <BackArrowButton onClick={browserHistory.goBack}>
+  <BackArrowButton hasHistory={window.history.length} onClick={browserHistory.goBack}>
     <svg width={props.size} height={props.size} viewBox="0 0 120 120" version="1.1">
       <g id="graphics" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="back-arrow" fill="#2196F3">

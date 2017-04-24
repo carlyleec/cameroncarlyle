@@ -1,6 +1,7 @@
 import React from 'react';
 import { Router, Route, IndexRoute, applyRouterMiddleware, browserHistory } from 'react-router';
 import { useScroll } from 'react-router-scroll';
+import ReactGA from 'react-ga';
 // import { Provider } from 'react-redux';
 import { ApolloProvider } from 'react-apollo';
 
@@ -21,9 +22,17 @@ import Data from './containers/Data';
 import Contact from './components/Contact';
 import GraphiQLPage from './components/GraphiQLPage';
 
+// Google Analytics
+ReactGA.initialize('UA-97983891-1');
+
+const logPageView = () => {
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+};
+
 const Routes = props => (
   <ApolloProvider client={client} store={props.store}>
-    <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
+    <Router history={browserHistory} onUpdate={logPageView} render={applyRouterMiddleware(useScroll())}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
         <Route component={Layout}>
